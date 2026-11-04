@@ -13,4 +13,6 @@ export const MONTHS = {
   12: "décembre",
 };
 
-export const getMonth = (date) => MONTHS[date.getMonth()];
+// date.getMonth() numérote les mois de 0 à 11 ; MONTHS utilise les clés 1 à 12.
+// Ajouter 1 aligne les deux numérotations pour retrouver le bon mois.
+export const getMonth = (date) => MONTHS[date.getMonth() + 1];
