@@ -27,9 +27,8 @@ export const DataProvider = ({ children }) => {
     }
   }, []);
   useEffect(() => {
-    if (data) return;
     getData();
-  });
+  },[getData]);
 
 const copyData = [...(data?.events ?? [])]
 const triCopyData = copyData.sort((evtA, evtB) =>
